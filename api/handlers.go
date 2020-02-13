@@ -19,3 +19,8 @@ func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 func CreateUser(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	io.WriteString(w, "Create User Handler!!!")
 }
+
+func Login(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	userName := ps.ByName("user_name")
+	io.WriteString(w, "Login User "+userName)
+}
