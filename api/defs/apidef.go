@@ -6,6 +6,12 @@ type UserCredential struct {
 	Pwd      string `json:"pwd"`
 }
 
+//response
+type SignedUp struct {
+	Success   bool   `json:"success"`
+	SessionId string `json:"session_id"`
+}
+
 // Data model
 type VideoInfo struct {
 	Id           string
@@ -15,13 +21,13 @@ type VideoInfo struct {
 }
 
 type Comment struct {
-	Id string
+	Id      string
 	VideoId string
-	Author string
+	Author  string
 	Content string
 }
 
 type SimpleSession struct {
 	Username string //login name
-	TTL int64
+	TTL      int64
 }
